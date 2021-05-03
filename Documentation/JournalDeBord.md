@@ -21,3 +21,7 @@ Je vais aussi effectué une maquette de l'application.
 ### Aprèm
 
 Je vais commencer le projet par la classe carte et paquet. Je ferai en même temps la partie graphique du programme.
+
+Les images imposés pour les cartes sont des SVG, ne sachant pas comment les utiliser en WF je vais les convertir en png.
+
+J'ai terminé la partie graphique du programme.
