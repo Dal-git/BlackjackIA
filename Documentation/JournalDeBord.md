@@ -32,4 +32,12 @@ J'ai terminé la partie graphique du programme.
 
 J'ai renommé toutes mes cartes pour pouvoir les utiliser avec des Enum.
 
-J'ai terminé la classe carte. 
+J'ai terminé la classe carte ainsi que la classe paquet et joueur.
+
+Je commence la classe Blackjack.
+
+### Aprèm
+
+ Je continue la class Blackjack.
+
+Création de la classe hérité de Joueur, Croupier,

@@ -64,7 +64,7 @@ namespace BlackjackIA
                 case Valeur.Huit:
                 case Valeur.Neuf:
                 case Valeur.Dix:
-                    ValeurDansJeu = (int)valeur + 1;
+                    ValeurDansJeu = (int)valeur + 2;
                     break;
                 case Valeur.Valet:
                 case Valeur.Dame:
@@ -77,7 +77,7 @@ namespace BlackjackIA
             }
             Name = CarteValeur.ToString() + CarteCouleur.ToString();
             Size = new Size(209, 303);
-            Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);
+            Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);            
         }
         /// <summary>
         /// 
@@ -85,7 +85,7 @@ namespace BlackjackIA
         /// <returns></returns>
         public override string ToString()
         {
-            return CarteValeur + " de " + CarteCouleur;
+            return string.Format("_{0}{1}", CarteValeur, CarteCouleur);
         }
     }
 }
