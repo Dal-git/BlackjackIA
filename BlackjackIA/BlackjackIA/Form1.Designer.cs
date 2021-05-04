@@ -173,7 +173,7 @@ namespace BlackjackIA
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox14.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox14.Location = new System.Drawing.Point(221, 19);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(209, 303);
@@ -183,7 +183,7 @@ namespace BlackjackIA
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox13.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox13.Location = new System.Drawing.Point(436, 19);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(209, 303);
@@ -193,7 +193,7 @@ namespace BlackjackIA
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox12.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox12.Location = new System.Drawing.Point(1078, 19);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(209, 303);
@@ -203,7 +203,7 @@ namespace BlackjackIA
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox11.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox11.Location = new System.Drawing.Point(863, 19);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(209, 303);
@@ -213,7 +213,7 @@ namespace BlackjackIA
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox10.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox10.Location = new System.Drawing.Point(648, 19);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(209, 303);
@@ -223,7 +223,7 @@ namespace BlackjackIA
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox9.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox9.Location = new System.Drawing.Point(6, 19);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(209, 303);
@@ -249,7 +249,7 @@ namespace BlackjackIA
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox2.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox2.Location = new System.Drawing.Point(221, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(209, 303);
@@ -259,7 +259,7 @@ namespace BlackjackIA
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox3.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox3.Location = new System.Drawing.Point(436, 19);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(209, 303);
@@ -269,7 +269,7 @@ namespace BlackjackIA
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox4.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox4.Location = new System.Drawing.Point(1078, 19);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(209, 303);
@@ -279,7 +279,7 @@ namespace BlackjackIA
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox5.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox5.Location = new System.Drawing.Point(863, 19);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(209, 303);
@@ -289,7 +289,7 @@ namespace BlackjackIA
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox6.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox6.Location = new System.Drawing.Point(648, 19);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(209, 303);
@@ -299,7 +299,7 @@ namespace BlackjackIA
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::BlackjackIA.Properties.Resources._10_of_clubs;
+            this.pictureBox7.Image = global::BlackjackIA.Properties.Resources._AsCarreau;
             this.pictureBox7.Location = new System.Drawing.Point(6, 19);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(209, 303);
@@ -492,6 +492,7 @@ namespace BlackjackIA
             this.MinimizeBox = false;
             this.Name = "VuePrincipale";
             this.Text = "BlackjackIA";
+            this.Load += new System.EventHandler(this.VuePrincipale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();

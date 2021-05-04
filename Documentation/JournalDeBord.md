@@ -25,3 +25,11 @@ Je vais commencer le projet par la classe carte et paquet. Je ferai en même tem
 Les images imposés pour les cartes sont des SVG, ne sachant pas comment les utiliser en WF je vais les convertir en png.
 
 J'ai terminé la partie graphique du programme.
+
+## Mardi 04.05
+
+###  Matin
+
+J'ai renommé toutes mes cartes pour pouvoir les utiliser avec des Enum.
+
+J'ai terminé la classe carte. 

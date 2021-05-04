@@ -16,5 +16,10 @@ namespace BlackjackIA
         {
             InitializeComponent();
         }
+
+        private void VuePrincipale_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace BlackjackIA.Properties {
     // à l'aide d'un outil, tel que ResGen ou Visual Studio.
     // Pour ajouter ou supprimer un membre, modifiez votre fichier .ResX, puis réexécutez ResGen
     // avec l'option /str ou régénérez votre projet VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,9 +63,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10_of_clubs {
+        internal static System.Drawing.Bitmap _AsCarreau {
             get {
-                object obj = ResourceManager.GetObject("_10_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_AsCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10_of_diamonds {
+        internal static System.Drawing.Bitmap _AsCoeur {
             get {
-                object obj = ResourceManager.GetObject("_10_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_AsCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10_of_hearts {
+        internal static System.Drawing.Bitmap _AsPique {
             get {
-                object obj = ResourceManager.GetObject("_10_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_AsPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10_of_spades {
+        internal static System.Drawing.Bitmap _AsTrefle {
             get {
-                object obj = ResourceManager.GetObject("_10_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_AsTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2_of_clubs {
+        internal static System.Drawing.Bitmap _CinqCarreau {
             get {
-                object obj = ResourceManager.GetObject("_2_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_CinqCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2_of_diamonds {
+        internal static System.Drawing.Bitmap _CinqCoeur {
             get {
-                object obj = ResourceManager.GetObject("_2_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_CinqCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2_of_hearts {
+        internal static System.Drawing.Bitmap _CinqPique {
             get {
-                object obj = ResourceManager.GetObject("_2_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_CinqPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2_of_spades {
+        internal static System.Drawing.Bitmap _CinqTrefle {
             get {
-                object obj = ResourceManager.GetObject("_2_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_CinqTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3_of_clubs {
+        internal static System.Drawing.Bitmap _DameCarreau {
             get {
-                object obj = ResourceManager.GetObject("_3_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_DameCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3_of_diamonds {
+        internal static System.Drawing.Bitmap _DameCoeur {
             get {
-                object obj = ResourceManager.GetObject("_3_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_DameCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3_of_hearts {
+        internal static System.Drawing.Bitmap _DamePique {
             get {
-                object obj = ResourceManager.GetObject("_3_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_DamePique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3_of_spades {
+        internal static System.Drawing.Bitmap _DameTrefle {
             get {
-                object obj = ResourceManager.GetObject("_3_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_DameTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4_of_clubs {
+        internal static System.Drawing.Bitmap _DeuxCarreau {
             get {
-                object obj = ResourceManager.GetObject("_4_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_DeuxCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4_of_diamonds {
+        internal static System.Drawing.Bitmap _DeuxCoeur {
             get {
-                object obj = ResourceManager.GetObject("_4_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_DeuxCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4_of_hearts {
+        internal static System.Drawing.Bitmap _DeuxPique {
             get {
-                object obj = ResourceManager.GetObject("_4_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_DeuxPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4_of_spades {
+        internal static System.Drawing.Bitmap _DeuxTrefle {
             get {
-                object obj = ResourceManager.GetObject("_4_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_DeuxTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5_of_clubs {
+        internal static System.Drawing.Bitmap _DixCarreau {
             get {
-                object obj = ResourceManager.GetObject("_5_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_DixCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5_of_diamonds {
+        internal static System.Drawing.Bitmap _DixCoeur {
             get {
-                object obj = ResourceManager.GetObject("_5_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_DixCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5_of_hearts {
+        internal static System.Drawing.Bitmap _DixPique {
             get {
-                object obj = ResourceManager.GetObject("_5_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_DixPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5_of_spades {
+        internal static System.Drawing.Bitmap _DixTrefle {
             get {
-                object obj = ResourceManager.GetObject("_5_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_DixTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6_of_clubs {
+        internal static System.Drawing.Bitmap _HuitCarreau {
             get {
-                object obj = ResourceManager.GetObject("_6_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_HuitCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6_of_diamonds {
+        internal static System.Drawing.Bitmap _HuitCoeur {
             get {
-                object obj = ResourceManager.GetObject("_6_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_HuitCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6_of_hearts {
+        internal static System.Drawing.Bitmap _HuitPique {
             get {
-                object obj = ResourceManager.GetObject("_6_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_HuitPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6_of_spades {
+        internal static System.Drawing.Bitmap _HuitTrefle {
             get {
-                object obj = ResourceManager.GetObject("_6_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_HuitTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +303,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7_of_clubs {
+        internal static System.Drawing.Bitmap _NeufCarreau {
             get {
-                object obj = ResourceManager.GetObject("_7_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_NeufCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +313,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7_of_diamonds {
+        internal static System.Drawing.Bitmap _NeufCoeur {
             get {
-                object obj = ResourceManager.GetObject("_7_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_NeufCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +323,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7_of_hearts {
+        internal static System.Drawing.Bitmap _NeufPique {
             get {
-                object obj = ResourceManager.GetObject("_7_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_NeufPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +333,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7_of_spades {
+        internal static System.Drawing.Bitmap _NeufTrefle {
             get {
-                object obj = ResourceManager.GetObject("_7_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_NeufTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8_of_clubs {
+        internal static System.Drawing.Bitmap _QuatreCarreau {
             get {
-                object obj = ResourceManager.GetObject("_8_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_QuatreCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +353,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8_of_diamonds {
+        internal static System.Drawing.Bitmap _QuatreCoeur {
             get {
-                object obj = ResourceManager.GetObject("_8_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_QuatreCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +363,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8_of_hearts {
+        internal static System.Drawing.Bitmap _QuatrePique {
             get {
-                object obj = ResourceManager.GetObject("_8_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_QuatrePique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,9 +373,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8_of_spades {
+        internal static System.Drawing.Bitmap _QuatreTrefle {
             get {
-                object obj = ResourceManager.GetObject("_8_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_QuatreTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,9 +383,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9_of_clubs {
+        internal static System.Drawing.Bitmap _RoiCarreau {
             get {
-                object obj = ResourceManager.GetObject("_9_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_RoiCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +393,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9_of_diamonds {
+        internal static System.Drawing.Bitmap _RoiCoeur {
             get {
-                object obj = ResourceManager.GetObject("_9_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_RoiCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +403,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9_of_hearts {
+        internal static System.Drawing.Bitmap _RoiPique {
             get {
-                object obj = ResourceManager.GetObject("_9_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_RoiPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,9 +413,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9_of_spades {
+        internal static System.Drawing.Bitmap _RoiTrefle {
             get {
-                object obj = ResourceManager.GetObject("_9_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_RoiTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +423,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ace_of_clubs {
+        internal static System.Drawing.Bitmap _SeptCarreau {
             get {
-                object obj = ResourceManager.GetObject("Ace_of_clubs", resourceCulture);
+                object obj = ResourceManager.GetObject("_SeptCarreau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +433,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ace_of_diamonds {
+        internal static System.Drawing.Bitmap _SeptCoeur {
             get {
-                object obj = ResourceManager.GetObject("Ace_of_diamonds", resourceCulture);
+                object obj = ResourceManager.GetObject("_SeptCoeur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +443,9 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ace_of_hearts {
+        internal static System.Drawing.Bitmap _SeptPique {
             get {
-                object obj = ResourceManager.GetObject("Ace_of_hearts", resourceCulture);
+                object obj = ResourceManager.GetObject("_SeptPique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +453,129 @@ namespace BlackjackIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ace_of_spades {
+        internal static System.Drawing.Bitmap _SeptTrefle {
             get {
-                object obj = ResourceManager.GetObject("Ace_of_spades", resourceCulture);
+                object obj = ResourceManager.GetObject("_SeptTrefle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _SixCarreau {
+            get {
+                object obj = ResourceManager.GetObject("_SixCarreau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _SixCoeur {
+            get {
+                object obj = ResourceManager.GetObject("_SixCoeur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _SixPique {
+            get {
+                object obj = ResourceManager.GetObject("_SixPique", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _SixTrefle {
+            get {
+                object obj = ResourceManager.GetObject("_SixTrefle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _TroisCarreau {
+            get {
+                object obj = ResourceManager.GetObject("_TroisCarreau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _TroisCoeur {
+            get {
+                object obj = ResourceManager.GetObject("_TroisCoeur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _TroisPique {
+            get {
+                object obj = ResourceManager.GetObject("_TroisPique", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _TroisTrefle {
+            get {
+                object obj = ResourceManager.GetObject("_TroisTrefle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ValetCarreau {
+            get {
+                object obj = ResourceManager.GetObject("_ValetCarreau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ValetCoeur {
+            get {
+                object obj = ResourceManager.GetObject("_ValetCoeur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ValetPique {
+            get {
+                object obj = ResourceManager.GetObject("_ValetPique", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ValetTrefle {
+            get {
+                object obj = ResourceManager.GetObject("_ValetTrefle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -487,126 +607,6 @@ namespace BlackjackIA.Properties {
             get {
                 object obj = ResourceManager.GetObject("icone__1_", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Jack_of_clubs {
-            get {
-                object obj = ResourceManager.GetObject("Jack_of_clubs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Jack_of_diamonds {
-            get {
-                object obj = ResourceManager.GetObject("Jack_of_diamonds", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Jack_of_hearts {
-            get {
-                object obj = ResourceManager.GetObject("Jack_of_hearts", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Jack_of_spades {
-            get {
-                object obj = ResourceManager.GetObject("Jack_of_spades", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap King_of_clubs {
-            get {
-                object obj = ResourceManager.GetObject("King_of_clubs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap King_of_diamonds {
-            get {
-                object obj = ResourceManager.GetObject("King_of_diamonds", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap King_of_hearts {
-            get {
-                object obj = ResourceManager.GetObject("King_of_hearts", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap King_of_spades {
-            get {
-                object obj = ResourceManager.GetObject("King_of_spades", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Queen_of_clubs {
-            get {
-                object obj = ResourceManager.GetObject("Queen_of_clubs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Queen_of_diamonds {
-            get {
-                object obj = ResourceManager.GetObject("Queen_of_diamonds", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Queen_of_hearts {
-            get {
-                object obj = ResourceManager.GetObject("Queen_of_hearts", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Queen_of_spades {
-            get {
-                object obj = ResourceManager.GetObject("Queen_of_spades", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
