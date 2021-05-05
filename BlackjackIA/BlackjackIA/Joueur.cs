@@ -60,6 +60,7 @@ namespace BlackjackIA
                     paquet.PaquetDuJeu.RemoveAt(indexCarteATirer);
                     ValeurDeLaMain += cartePioche.ValeurDansJeu;
                 }
+                TestChangementValeurAs();
                 AfficherMain(GbxMainJoueur);
             }
         }
@@ -70,6 +71,19 @@ namespace BlackjackIA
             {
                 carte.Location = new Point(6 + main.IndexOf(carte) * 210, 15);
                 gbx.Controls.Add(carte);
+            }
+        }
+
+        public void TestChangementValeurAs()
+        {
+            if (valeurDeLaMain > 21 && Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray().Count() != 0)
+            {
+                Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray()[0].ValeurDansJeu = 1;
+                valeurDeLaMain = 0;
+                foreach (Carte carte in Main)
+                {
+                    valeurDeLaMain += carte.ValeurDansJeu;
+                }
             }
         }
     }

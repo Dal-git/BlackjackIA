@@ -36,14 +36,14 @@ namespace BlackjackIA
         private Paquet _paquet;
         private Form form;
         private Random random;
-        private Label _labelCarteRestantes;
+        private string _etatPartie;
 
         internal Paquet Paquet { get => _paquet; set => _paquet = value; }
         internal Joueur Joueur { get => joueur; set => joueur = value; }
         public Form Form { get => form; set => form = value; }
         public Random Random { get => random; set => random = value; }
-        public Label LabelCarteRestantes { get => _labelCarteRestantes; set => _labelCarteRestantes = value; }
         internal Croupier Croupier { get => _croupier; set => _croupier = value; }
+        public string EtatPartie { get => _etatPartie; set => _etatPartie = value; }
 
         public Blackjack(Joueur joueur, Paquet paquetUtilise, Form form, Random random)
         {
@@ -52,17 +52,31 @@ namespace BlackjackIA
             Form = form;
             Random = random;
 
-            LabelCarteRestantes = form.Controls.Find("lbl_CartesRestantes", false)[0] as Label;
             Croupier = new Croupier(form.Controls.Find("gbx_Croupier", false)[0] as GroupBox);
         }
 
-        public void Jouer()
+        public void Distribution()
         {
             joueur.Piocher(Paquet, 2, Random);
             Croupier.Piocher(Paquet, 2, Random);
             Croupier.CacherSecondeCarte();
-            LabelCarteRestantes.Text = Paquet.PaquetDuJeu.Count.ToString();
             Joueur.AfficherMain(form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);
+        }
+
+        public void Comparaison()
+        {
+            if (joueur.ValeurDeLaMain > Croupier.ValeurDeLaMain)
+            {
+                EtatPartie = "Joueur gagne";
+            }
+            else if (joueur.ValeurDeLaMain < Croupier.ValeurDeLaMain)
+            {
+                EtatPartie = "Croupier gagne";
+            }
+            else
+            {
+                EtatPartie = "Egalite";
+            }
         }
     }
 }

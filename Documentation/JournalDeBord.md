@@ -41,3 +41,23 @@ Je commence la classe Blackjack.
  Je continue la class Blackjack.
 
 Création de la classe hérité de Joueur, Croupier,
+
+## Mercredi 05.05
+
+### Matin
+
+A la journée d'information militaire
+
+### Aprèm
+
+Pour l'instant le jeu nous indique combien de carte ont été joué, combien il en reste, la valeur des mains, piocher une carte et cacher la seconde carte du croupier.
+
+Le jeu nous empeche aussi de pioche si notre main dépasse ou est égal a 21.
+
+Mais il ne permet pas encore de changer les As de valeur, donc je vais le faire maintenant.
+
+Je pense tout simplement dire que si la valeur de la main est >21 alors le premier As dans la main changera sa valeur pour 1.
+
+J'ai réussi a changer la valeur pour les As si la main est >21 en utilisant principalement la methode Where. J'ai simplement demandé que si la main est >21 et qu'il y a une carte As avec comme valeur 11 dans la main de changer sa valeur a 1 et de recompter la main.
+
+Maintenant je vais vérifier l'état de la partie avec des test simples.

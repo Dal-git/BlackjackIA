@@ -23,14 +23,14 @@ namespace BlackjackIA
         {
             InitializeComponent();
             joueur = new Joueur("Moi", gbx_Joueur);
-            blackjack = new Blackjack(joueur, paquet, this, Random);            
+            blackjack = new Blackjack(joueur, paquet, this, Random);
+            lbl_NomDuJoueur.Text = joueur.NomDuJoueur;
         }
 
         private void VuePrincipale_Load(object sender, EventArgs e)
         {
-            blackjack.Jouer();
-            MiseAJourAffichage();
-            lbl_NomDuJoueur.Text = joueur.NomDuJoueur;
+            blackjack.Distribution();
+            MiseAJourAffichage();            
             lbl_TotalCroupier.Text = blackjack.Croupier.Main[0].ValeurDansJeu.ToString();
         }
 
