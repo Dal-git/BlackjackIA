@@ -69,6 +69,10 @@ namespace BlackjackIA
         {
             foreach (Carte carte in Main)
             {
+                if (carte.Retourne)
+                {
+                    carte.Retourner();
+                }
                 carte.Location = new Point(6 + main.IndexOf(carte) * 210, 15);
                 gbx.Controls.Add(carte);
             }
@@ -84,6 +88,15 @@ namespace BlackjackIA
                 {
                     valeurDeLaMain += carte.ValeurDansJeu;
                 }
+            }
+        }
+
+        public void CalculerValeurDeLaMain()
+        {
+            valeurDeLaMain = 0;
+            foreach (Carte carte in Main)
+            {
+                ValeurDeLaMain += carte.ValeurDansJeu;
             }
         }
     }

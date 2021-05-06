@@ -37,19 +37,29 @@ namespace BlackjackIA
         private void btn_Piocher_Click(object sender, EventArgs e)
         {
             joueur.Piocher(paquet, 1, Random);
+            if (joueur.ValeurDeLaMain >= 21)
+            {
+                btn_Rester_Click(this, e);
+            }
             MiseAJourAffichage();
         }
 
         public void MiseAJourAffichage()
         {
+            int carteJouees = (joueur.Main.Count + blackjack.Croupier.Main.Count);
             lbl_TotalJoueur.Text = joueur.ValeurDeLaMain.ToString();            
-            lbl_CartesJouees.Text = (joueur.Main.Count + blackjack.Croupier.Main.Count).ToString();
-            lbl_CartesRestantes.Text = paquet.PaquetDuJeu.Count.ToString();
+            lbl_CartesJouees.Text = carteJouees.ToString();
+            lbl_CartesRestantes.Text = (52 - carteJouees).ToString();
+            label13.Text = blackjack.EtatPartie;
         }
 
         private void btn_Rester_Click(object sender, EventArgs e)
         {
-
+            blackjack.CroupierPiocheJusqua17();
+            blackjack.Croupier.AfficherMain(gbx_Croupier);
+            lbl_TotalCroupier.Text = blackjack.Croupier.ValeurDeLaMain.ToString();
+            blackjack.Comparaison();
+            MiseAJourAffichage();
         }
     }
 }

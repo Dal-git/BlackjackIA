@@ -52,12 +52,23 @@ A la journée d'information militaire
 
 Pour l'instant le jeu nous indique combien de carte ont été joué, combien il en reste, la valeur des mains, piocher une carte et cacher la seconde carte du croupier.
 
-Le jeu nous empeche aussi de pioche si notre main dépasse ou est égal a 21.
+Le jeu nous empêche aussi de pioche si notre main dépasse ou est égal a 21.
 
 Mais il ne permet pas encore de changer les As de valeur, donc je vais le faire maintenant.
 
 Je pense tout simplement dire que si la valeur de la main est >21 alors le premier As dans la main changera sa valeur pour 1.
 
-J'ai réussi a changer la valeur pour les As si la main est >21 en utilisant principalement la methode Where. J'ai simplement demandé que si la main est >21 et qu'il y a une carte As avec comme valeur 11 dans la main de changer sa valeur a 1 et de recompter la main.
+J'ai réussi a changer la valeur pour les As si la main est >21 en utilisant principalement la méthode Where. J'ai simplement demandé que si la main est >21 et qu'il y a une carte As avec comme valeur 11 dans la main de changer sa valeur a 1 et de recompter la main.
 
-Maintenant je vais vérifier l'état de la partie avec des test simples.
+Maintenant je vais vérifier l'état de la partie avec des test simples pour savoir qui gagne.
+
+## Jeudi 06.05
+
+### Matin
+
+Je continue de programmer la fin de la partie.
+
+J'ai pu terminer les conditions de victoire pour le joueur et le croupier, je vais débuter la programmation de l'assistant. J'ai aussi ajuster le calcule de l'affichage des cartes restantes, avant il devait compter toutes les cartes dans le deck mais maintenant il se contente de faire 52 - le nombre de carte jouées.
+
+Je pense que l'assistant devra être implémenter sous forme de Controller attaché au Joueur.
+

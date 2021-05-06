@@ -65,17 +65,42 @@ namespace BlackjackIA
 
         public void Comparaison()
         {
-            if (joueur.ValeurDeLaMain > Croupier.ValeurDeLaMain)
+            if (EtatPartie == null)
             {
-                EtatPartie = "Joueur gagne";
-            }
-            else if (joueur.ValeurDeLaMain < Croupier.ValeurDeLaMain)
+                if (joueur.ValeurDeLaMain <= 21)
+                {
+                    if (Croupier.ValeurDeLaMain <= 21)
+                    {
+                        if (joueur.ValeurDeLaMain > Croupier.ValeurDeLaMain)
+                        {
+                            EtatPartie = "Joueur gagne";
+                        }
+                        else if (joueur.ValeurDeLaMain < Croupier.ValeurDeLaMain)
+                        {
+                            EtatPartie = "Croupier gagne";
+                        }
+                        else
+                        {
+                            EtatPartie = "Egalite";
+                        }
+                    }
+                    else
+                    {
+                        EtatPartie = "Croupier dépasse 21";
+                    }
+                }
+                else
+                {
+                    EtatPartie = "Joueur dépasse 21";
+                }
+            }            
+        }
+
+        public void CroupierPiocheJusqua17()
+        {
+            while (Croupier.ValeurDeLaMain < 17)
             {
-                EtatPartie = "Croupier gagne";
-            }
-            else
-            {
-                EtatPartie = "Egalite";
+                Croupier.Piocher(Paquet, 1, random);
             }
         }
     }

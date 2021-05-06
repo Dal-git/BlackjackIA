@@ -16,8 +16,8 @@ namespace BlackjackIA
         }
 
         public void CacherSecondeCarte()
-        {            
-            Main[1].Image = new Bitmap(Properties.Resources.dos as Image, Main[0].Size);
+        {
+            Main[1].Retourner();
         }
     }
 }

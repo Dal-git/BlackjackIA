@@ -38,10 +38,12 @@ namespace BlackjackIA
         private Couleur _carteCouleur;
         private Valeur _carteValeur;
         private int _valeurDansJeu;
+        private bool _retourne;
 
         internal Couleur CarteCouleur { get => _carteCouleur; set => _carteCouleur = value; }
         internal Valeur CarteValeur { get => _carteValeur; set => _carteValeur = value; }
         public int ValeurDansJeu { get => _valeurDansJeu; set => _valeurDansJeu = value; }
+        public bool Retourne { get => _retourne; set => _retourne = value; }
 
         /// <summary>
         /// 
@@ -52,6 +54,7 @@ namespace BlackjackIA
         {
             CarteCouleur = couleur;
             CarteValeur = valeur;
+            Retourne = false;
 
             switch (valeur)
             {
@@ -77,7 +80,20 @@ namespace BlackjackIA
             }
             Name = CarteValeur.ToString() + CarteCouleur.ToString();
             Size = new Size(209, 303);
-            Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);            
+            Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);
+        }
+
+        public void Retourner()
+        {
+            Retourne = !Retourne;
+            if (Retourne)
+            {
+                Image = new Bitmap(Properties.Resources.dos as Image, Size);
+            }
+            else
+            {
+                Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);
+            }
         }
         /// <summary>
         /// 
