@@ -72,3 +72,6 @@ J'ai pu terminer les conditions de victoire pour le joueur et le croupier, je va
 
 Je pense que l'assistant devra être implémenter sous forme de Controller attaché au Joueur.
 
+### Aprèm
+
+Devant partir en vitesse je ferai mon jdb lundi

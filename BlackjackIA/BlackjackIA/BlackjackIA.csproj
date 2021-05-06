@@ -52,6 +52,7 @@
     </Compile>
     <Compile Include="Croupier.cs" />
     <Compile Include="Joueur.cs" />
+    <Compile Include="Tirage.cs" />
     <Compile Include="VuePrincipale.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -30,7 +30,8 @@ namespace BlackjackIA
         private void VuePrincipale_Load(object sender, EventArgs e)
         {
             blackjack.Distribution();
-            MiseAJourAffichage();            
+            MiseAJourAffichage();
+            ChangementCouleurBoutton();
             lbl_TotalCroupier.Text = blackjack.Croupier.Main[0].ValeurDansJeu.ToString();
         }
 
@@ -41,13 +42,17 @@ namespace BlackjackIA
             {
                 btn_Rester_Click(this, e);
             }
+            else
+            {
+                ChangementCouleurBoutton();
+            }
             MiseAJourAffichage();
         }
 
         public void MiseAJourAffichage()
         {
             int carteJouees = (joueur.Main.Count + blackjack.Croupier.Main.Count);
-            lbl_TotalJoueur.Text = joueur.ValeurDeLaMain.ToString();            
+            lbl_TotalJoueur.Text = joueur.ValeurDeLaMain.ToString();
             lbl_CartesJouees.Text = carteJouees.ToString();
             lbl_CartesRestantes.Text = (52 - carteJouees).ToString();
             label13.Text = blackjack.EtatPartie;
@@ -60,6 +65,24 @@ namespace BlackjackIA
             lbl_TotalCroupier.Text = blackjack.Croupier.ValeurDeLaMain.ToString();
             blackjack.Comparaison();
             MiseAJourAffichage();
+        }
+
+        public void ChangementCouleurBoutton()
+        {
+            if (joueur.ValeurDeLaMain != 0 && blackjack.Croupier.ValeurDeLaMain != 0)
+            {
+                if (blackjack.Strategie[blackjack.Strategie.Keys.Where(x => x.ValeurMainCroupier == blackjack.Croupier.Main[0].ValeurDansJeu).ToArray()[0]] &&
+                   blackjack.Strategie[blackjack.Strategie.Keys.Where(x => x.ValeurMainJoueur == joueur.ValeurDeLaMain).ToArray()[0]])
+                {
+                    btn_Piocher.BackColor = Color.Green;
+                    btn_Rester.BackColor = Color.Red;
+                }
+                else
+                {
+                    btn_Rester.BackColor = Color.Green;
+                    btn_Piocher.BackColor = Color.Red;
+                }
+            }
         }
     }
 }

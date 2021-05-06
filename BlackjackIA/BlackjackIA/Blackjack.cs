@@ -37,6 +37,7 @@ namespace BlackjackIA
         private Form form;
         private Random random;
         private string _etatPartie;
+        Dictionary<Tirage, bool> strategie = new Dictionary<Tirage, bool>();
 
         internal Paquet Paquet { get => _paquet; set => _paquet = value; }
         internal Joueur Joueur { get => joueur; set => joueur = value; }
@@ -44,6 +45,7 @@ namespace BlackjackIA
         public Random Random { get => random; set => random = value; }
         internal Croupier Croupier { get => _croupier; set => _croupier = value; }
         public string EtatPartie { get => _etatPartie; set => _etatPartie = value; }
+        internal Dictionary<Tirage, bool> Strategie { get => strategie; set => strategie = value; }
 
         public Blackjack(Joueur joueur, Paquet paquetUtilise, Form form, Random random)
         {
@@ -53,6 +55,23 @@ namespace BlackjackIA
             Random = random;
 
             Croupier = new Croupier(form.Controls.Find("gbx_Croupier", false)[0] as GroupBox);
+
+            for (int i = 2; i < 12; i++)
+            {
+                for (int j = 5; j < 22; j++)
+                {
+                    Tirage tirage = new Tirage(j, i);
+
+                    if (j >= 17 || (j >= 13 && i <= 6) || (i >= 4 && i <= 6 && j == 12))
+                    {
+                        Strategie.Add(tirage, false);
+                    }
+                    else
+                    {
+                        Strategie.Add(tirage, true);
+                    }
+                }
+            }
         }
 
         public void Distribution()
@@ -93,7 +112,7 @@ namespace BlackjackIA
                 {
                     EtatPartie = "Joueur dépasse 21";
                 }
-            }            
+            }
         }
 
         public void CroupierPiocheJusqua17()
