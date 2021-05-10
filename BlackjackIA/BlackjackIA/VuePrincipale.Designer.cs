@@ -52,6 +52,7 @@ namespace BlackjackIA
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -191,7 +192,7 @@ namespace BlackjackIA
             this.panel1.Controls.Add(this.lbl_Probabilites);
             this.panel1.Location = new System.Drawing.Point(1289, 420);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 231);
+            this.panel1.Size = new System.Drawing.Size(200, 234);
             this.panel1.TabIndex = 32;
             // 
             // lbl_Probabilites
@@ -303,6 +304,15 @@ namespace BlackjackIA
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1208, 423);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Plus";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // VuePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +320,7 @@ namespace BlackjackIA
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1577, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_CartesRestantes);
             this.Controls.Add(this.lbl_CartesJouees);
             this.Controls.Add(this.pictureBox15);
@@ -372,6 +383,7 @@ namespace BlackjackIA
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label lbl_CartesJouees;
         private System.Windows.Forms.Label lbl_CartesRestantes;
+        private System.Windows.Forms.Button button1;
     }
 }
 

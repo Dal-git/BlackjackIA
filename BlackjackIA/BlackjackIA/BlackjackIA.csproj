@@ -52,6 +52,12 @@
     </Compile>
     <Compile Include="Croupier.cs" />
     <Compile Include="Joueur.cs" />
+    <Compile Include="Statistiques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistiques.Designer.cs">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tirage.cs" />
     <Compile Include="VuePrincipale.cs">
       <SubType>Form</SubType>
@@ -62,6 +68,9 @@
     <Compile Include="Paquet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Statistiques.resx">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VuePrincipale.resx">
       <DependentUpon>VuePrincipale.cs</DependentUpon>
     </EmbeddedResource>

@@ -66,6 +66,8 @@ Maintenant je vais vérifier l'état de la partie avec des test simples pour sav
 
 ### Matin
 
+La fin d'une partie est terminé, pour l'instant nous avons juste un text pour nous dire qui gagne et il n'y a pas encore de manière de pouvoir rejouer sans relancer l'application.
+
 Je continue de programmer la fin de la partie.
 
 J'ai pu terminer les conditions de victoire pour le joueur et le croupier, je vais débuter la programmation de l'assistant. J'ai aussi ajuster le calcule de l'affichage des cartes restantes, avant il devait compter toutes les cartes dans le deck mais maintenant il se contente de faire 52 - le nombre de carte jouées.
@@ -74,4 +76,52 @@ Je pense que l'assistant devra être implémenter sous forme de Controller attac
 
 ### Aprèm
 
-Devant partir en vitesse je ferai mon jdb lundi
+Finalement je n'ai pas besoin de faire de l'assistant un Controller je l'ai juste directement intégrer a ma classe Blackjack qui représente les règles et déroulement du jeu.
+
+J'ai crée un Dictionnaire pour savoir quel conseil le conseiller doit nous donner avec comme clé un objet avec comme paramètre les valeurs des mains du jeu.
+
+Malheureusement il semblerait que la valeur récupérer ne soit pas toujours la bonne.
+
+## Lundi 10.05
+
+### Matin
+
+Je vais continuer ce que je faisais jeudi aprèm c'est a dire tester le conseillé et voir si son conseil est celui désiré.
+
+Toute les valeur de notre tableau pour le conseillé semble être identique a celle de la première cellule de la même ligne.
+
+On dirait que le test ne se fie qu'au première argument de notre test.
+
+J'ai réussi a résoudre mon problème.
+
+Il semblerait que mon ancienne ligne de code ne prenait que la première condition de mon test pour récupérer la valeur.
+
+##### Ancien test
+
+```c#
+blackjack.Strategie[blackjack.Strategie.Keys.Where(
+x => x.ValeurMainCroupier == blackjack.Croupier.Main[0].ValeurDansJeu
+).ToArray()[0]] 
+&& 
+blackjack.Strategie[blackjack.Strategie.Keys.Where(
+x => x.ValeurMainJoueur == joueur.ValeurDeLaMain
+).ToArray()[0]]
+```
+
+##### Nouveau test
+
+```c#
+blackjack.Strategie[blackjack.Strategie.Keys.Where(
+x => x.ValeurMainCroupier == blackjack.Croupier.Main[0].ValeurDansJeu 
+&&
+x.ValeurMainJoueur == blackjack.Joueur.ValeurDeLaMain
+).ToArray()[0]];
+```
+
+
+
+### Aprèm
+
+Pour cette après midi je vais commencé a m'intéresser aux statistiques du jeu ce qui est mon dernier point a faire pour le code.
+
+Je pense faire une deuxième form consacré aux détails des statistiques.

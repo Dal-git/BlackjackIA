@@ -16,9 +16,9 @@
 * Description : Jeu de blackjack développé dans le cadre d'un TPI de fin de CFC à l'école d'informatique de Genève.
 * L'application permet au joueur de jouer contre un ordinateur et d'être conseillé sur la pioche des cartes.
 *
-* Fichier : Carte.cs
+* Fichier : Paquet.cs
 *
-* Description : Cette classe permet de créer les cartes pour le jeu. Elle hérite de la classe PictureBox pour rendre leur création plus simple et cohérente.
+* Description : 
 */
 using System;
 using System.Collections.Generic;

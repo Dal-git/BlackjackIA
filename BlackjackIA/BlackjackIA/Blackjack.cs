@@ -38,6 +38,20 @@ namespace BlackjackIA
         private Random random;
         private string _etatPartie;
         Dictionary<Tirage, bool> strategie = new Dictionary<Tirage, bool>();
+        Dictionary<Carte.Valeur, double> probaCroupierSaute = new Dictionary<Carte.Valeur, double>()
+        {
+            {Carte.Valeur.Deux, 35.30},
+            {Carte.Valeur.Trois, 37.56},
+            {Carte.Valeur.Quatre, 40.28},
+            {Carte.Valeur.Cinq, 42.89},
+            {Carte.Valeur.Six, 42.08},
+            {Carte.Valeur.Sept, 25.99},
+            {Carte.Valeur.Huit, 23.86},
+            {Carte.Valeur.Neuf, 23.34},
+            {Carte.Valeur.Dix, 21.43},{Carte.Valeur.Valet, 21.43},{Carte.Valeur.Dame, 21.43},{Carte.Valeur.Roi, 21.43},
+            {Carte.Valeur.As, 11.65}
+        };
+        List<double> probaTirageCarte = new List<double>();
 
         internal Paquet Paquet { get => _paquet; set => _paquet = value; }
         internal Joueur Joueur { get => joueur; set => joueur = value; }
@@ -46,6 +60,8 @@ namespace BlackjackIA
         internal Croupier Croupier { get => _croupier; set => _croupier = value; }
         public string EtatPartie { get => _etatPartie; set => _etatPartie = value; }
         internal Dictionary<Tirage, bool> Strategie { get => strategie; set => strategie = value; }
+        internal Dictionary<Carte.Valeur, double> ProbaCroupierSaute { get => probaCroupierSaute; set => probaCroupierSaute = value; }
+        public List<double> ProbaTirageCarte { get => probaTirageCarte; set => probaTirageCarte = value; }
 
         public Blackjack(Joueur joueur, Paquet paquetUtilise, Form form, Random random)
         {
@@ -56,6 +72,7 @@ namespace BlackjackIA
 
             Croupier = new Croupier(form.Controls.Find("gbx_Croupier", false)[0] as GroupBox);
 
+            //Initialise le dictionnaire de valeur pour savoir si on doit piocher
             for (int i = 2; i < 12; i++)
             {
                 for (int j = 5; j < 22; j++)
@@ -86,15 +103,15 @@ namespace BlackjackIA
         {
             if (EtatPartie == null)
             {
-                if (joueur.ValeurDeLaMain <= 21)
+                if (Joueur.ValeurDeLaMain <= 21)
                 {
                     if (Croupier.ValeurDeLaMain <= 21)
                     {
-                        if (joueur.ValeurDeLaMain > Croupier.ValeurDeLaMain)
+                        if (Joueur.ValeurDeLaMain > Croupier.ValeurDeLaMain)
                         {
                             EtatPartie = "Joueur gagne";
                         }
-                        else if (joueur.ValeurDeLaMain < Croupier.ValeurDeLaMain)
+                        else if (Joueur.ValeurDeLaMain < Croupier.ValeurDeLaMain)
                         {
                             EtatPartie = "Croupier gagne";
                         }

@@ -1,4 +1,26 @@
-﻿using System;
+﻿/*
+* Auteur : Dallas CATILLAZ
+*
+* Professeur : M.Pascal BONVIN
+*
+* Experts : M.Robin BOUILLE et M.Daniel VANINI
+*
+* Date : 04 mai 2021
+*
+* Mandant : CFPT-Informatique, Genève, Petit-Lancy
+*
+* Projet : BlackjackIA - Jeu de Blackjack avec un adversaire et une aide controlé par une IA
+*
+* Version : 1.0
+*
+* Description : Jeu de blackjack développé dans le cadre d'un TPI de fin de CFC à l'école d'informatique de Genève.
+* L'application permet au joueur de jouer contre un ordinateur et d'être conseillé sur la pioche des cartes.
+*
+* Fichier : VuePrincipale.cs
+*
+* Description : 
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +35,10 @@ namespace BlackjackIA
     public partial class VuePrincipale : Form
     {
         Joueur joueur;
-        Paquet paquet = new Paquet(1);
+        Paquet paquet = new Paquet(3);
         static Random _random = new Random();
         Blackjack blackjack;
+        Statistiques statistiques = new Statistiques();
 
         public static Random Random { get => _random; set => _random = value; }
 
@@ -54,7 +77,7 @@ namespace BlackjackIA
             int carteJouees = (joueur.Main.Count + blackjack.Croupier.Main.Count);
             lbl_TotalJoueur.Text = joueur.ValeurDeLaMain.ToString();
             lbl_CartesJouees.Text = carteJouees.ToString();
-            lbl_CartesRestantes.Text = (52 - carteJouees).ToString();
+            lbl_CartesRestantes.Text = blackjack.Paquet.PaquetDuJeu.Count.ToString();
             label13.Text = blackjack.EtatPartie;
         }
 
@@ -71,8 +94,9 @@ namespace BlackjackIA
         {
             if (joueur.ValeurDeLaMain != 0 && blackjack.Croupier.ValeurDeLaMain != 0)
             {
-                if (blackjack.Strategie[blackjack.Strategie.Keys.Where(x => x.ValeurMainCroupier == blackjack.Croupier.Main[0].ValeurDansJeu).ToArray()[0]] &&
-                   blackjack.Strategie[blackjack.Strategie.Keys.Where(x => x.ValeurMainJoueur == joueur.ValeurDeLaMain).ToArray()[0]])
+                bool ilFautPioche = blackjack.Strategie[blackjack.Strategie.Keys.Where(x => x.ValeurMainCroupier == blackjack.Croupier.Main[0].ValeurDansJeu && x.ValeurMainJoueur == blackjack.Joueur.ValeurDeLaMain).ToArray()[0]];
+
+                if (ilFautPioche)
                 {
                     btn_Piocher.BackColor = Color.Green;
                     btn_Rester.BackColor = Color.Red;
