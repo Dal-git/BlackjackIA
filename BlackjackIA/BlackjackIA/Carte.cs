@@ -50,7 +50,7 @@ namespace BlackjackIA
         /// </summary>
         /// <param name="couleur"></param>
         /// <param name="valeur"></param>
-        public Carte(Couleur couleur = Couleur.Coeur, Valeur valeur = Valeur.As)
+        public Carte(Valeur valeur = Valeur.As, Couleur couleur = Couleur.Coeur)
         {
             CarteCouleur = couleur;
             CarteValeur = valeur;

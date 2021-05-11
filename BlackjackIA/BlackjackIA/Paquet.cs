@@ -46,12 +46,12 @@ namespace BlackjackIA
                 {
                     foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
                     {
-                        Carte carte = new Carte(couleur, valeur);
+                        Carte carte = new Carte(valeur, couleur);
                         PaquetDuJeu.Add(carte);
                     }
                 }
             }
-        }        
+        }
 
         /// <summary>
         /// 

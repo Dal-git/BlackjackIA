@@ -125,3 +125,15 @@ x.ValeurMainJoueur == blackjack.Joueur.ValeurDeLaMain
 Pour cette après midi je vais commencé a m'intéresser aux statistiques du jeu ce qui est mon dernier point a faire pour le code.
 
 Je pense faire une deuxième form consacré aux détails des statistiques.
+
+### Mardi
+
+#### Matin
+
+Ce matin je vais continué l'implémentation des statistiques.
+
+J'ai réussi a m'afficher le pourcentage de chance que l'on avait de pioche une certaine carte.
+
+#### Aprèm
+
+Cette après midi je vais faire en sorte que les statistiques affiches les stats de piocher une carte dans une autre form et qu'il n'y ait que les stats des valeurs possibles lors de la prochaine pioche, dans la form principale.

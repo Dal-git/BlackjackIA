@@ -51,7 +51,7 @@ namespace BlackjackIA
             {Carte.Valeur.Dix, 21.43},{Carte.Valeur.Valet, 21.43},{Carte.Valeur.Dame, 21.43},{Carte.Valeur.Roi, 21.43},
             {Carte.Valeur.As, 11.65}
         };
-        List<double> probaTirageCarte = new List<double>();
+        Dictionary<Carte.Valeur, double> probaTirageCarte = new Dictionary<Carte.Valeur, double>();
 
         internal Paquet Paquet { get => _paquet; set => _paquet = value; }
         internal Joueur Joueur { get => joueur; set => joueur = value; }
@@ -61,7 +61,7 @@ namespace BlackjackIA
         public string EtatPartie { get => _etatPartie; set => _etatPartie = value; }
         internal Dictionary<Tirage, bool> Strategie { get => strategie; set => strategie = value; }
         internal Dictionary<Carte.Valeur, double> ProbaCroupierSaute { get => probaCroupierSaute; set => probaCroupierSaute = value; }
-        public List<double> ProbaTirageCarte { get => probaTirageCarte; set => probaTirageCarte = value; }
+        public Dictionary<Carte.Valeur, double> ProbaTirageCarte { get => probaTirageCarte; set => probaTirageCarte = value; }
 
         public Blackjack(Joueur joueur, Paquet paquetUtilise, Form form, Random random)
         {
@@ -70,9 +70,10 @@ namespace BlackjackIA
             Form = form;
             Random = random;
 
+            //Créer un croupier avec un groupBox qui lui est associé
             Croupier = new Croupier(form.Controls.Find("gbx_Croupier", false)[0] as GroupBox);
 
-            //Initialise le dictionnaire de valeur pour savoir si on doit piocher
+            //Initialise le tableau de valeur pour savoir si on pioche
             for (int i = 2; i < 12; i++)
             {
                 for (int j = 5; j < 22; j++)
@@ -93,10 +94,10 @@ namespace BlackjackIA
 
         public void Distribution()
         {
-            joueur.Piocher(Paquet, 2, Random);
+            Joueur.Piocher(Paquet, 2, Random);
             Croupier.Piocher(Paquet, 2, Random);
-            Croupier.CacherSecondeCarte();
             Joueur.AfficherMain(form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);
+            Croupier.CacherSecondeCarte();
         }
 
         public void Comparaison()
@@ -137,6 +138,24 @@ namespace BlackjackIA
             while (Croupier.ValeurDeLaMain < 17)
             {
                 Croupier.Piocher(Paquet, 1, random);
+            }
+        }
+
+        public void CompterProbaTirageCarte()
+        {
+            probaTirageCarte.Clear();
+            foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
+            {
+                double nbrCarte = 0;
+                foreach (var carte in Paquet.PaquetDuJeu)
+                {
+                    if (carte.CarteValeur == valeur)
+                    {
+                        nbrCarte++;
+                    }
+                }
+                double proba = Math.Round(nbrCarte / Paquet.PaquetDuJeu.Count(), 3) * 100;
+                ProbaTirageCarte.Add(valeur, proba);
             }
         }
     }

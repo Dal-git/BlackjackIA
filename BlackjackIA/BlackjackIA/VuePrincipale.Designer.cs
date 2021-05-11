@@ -52,7 +52,8 @@ namespace BlackjackIA
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_details = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -188,9 +189,10 @@ namespace BlackjackIA
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lbl_Probabilites);
-            this.panel1.Location = new System.Drawing.Point(1289, 420);
+            this.panel1.Location = new System.Drawing.Point(1331, 423);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 234);
             this.panel1.TabIndex = 32;
@@ -198,18 +200,17 @@ namespace BlackjackIA
             // lbl_Probabilites
             // 
             this.lbl_Probabilites.AutoSize = true;
-            this.lbl_Probabilites.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Probabilites.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Probabilites.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Probabilites.Location = new System.Drawing.Point(3, 0);
             this.lbl_Probabilites.Name = "lbl_Probabilites";
-            this.lbl_Probabilites.Size = new System.Drawing.Size(152, 39);
+            this.lbl_Probabilites.Size = new System.Drawing.Size(0, 31);
             this.lbl_Probabilites.TabIndex = 33;
-            this.lbl_Probabilites.Text = "00 : 00%";
             // 
             // btn_Piocher
             // 
             this.btn_Piocher.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Piocher.Location = new System.Drawing.Point(723, 478);
+            this.btn_Piocher.Location = new System.Drawing.Point(734, 488);
             this.btn_Piocher.Name = "btn_Piocher";
             this.btn_Piocher.Size = new System.Drawing.Size(178, 65);
             this.btn_Piocher.TabIndex = 33;
@@ -220,7 +221,7 @@ namespace BlackjackIA
             // btn_Rester
             // 
             this.btn_Rester.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rester.Location = new System.Drawing.Point(907, 478);
+            this.btn_Rester.Location = new System.Drawing.Point(918, 488);
             this.btn_Rester.Name = "btn_Rester";
             this.btn_Rester.Size = new System.Drawing.Size(178, 65);
             this.btn_Rester.TabIndex = 34;
@@ -234,7 +235,7 @@ namespace BlackjackIA
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(668, 546);
+            this.label12.Location = new System.Drawing.Point(678, 556);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(478, 39);
             this.label12.TabIndex = 35;
@@ -244,11 +245,11 @@ namespace BlackjackIA
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(716, 436);
+            this.label13.Location = new System.Drawing.Point(808, 420);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(380, 39);
+            this.label13.Size = new System.Drawing.Size(240, 26);
             this.label13.TabIndex = 36;
             this.label13.Text = "Que voulez vous faire ?";
             // 
@@ -279,7 +280,7 @@ namespace BlackjackIA
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Red;
-            this.pictureBox15.Location = new System.Drawing.Point(967, 546);
+            this.pictureBox15.Location = new System.Drawing.Point(977, 556);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(48, 45);
             this.pictureBox15.TabIndex = 38;
@@ -288,7 +289,7 @@ namespace BlackjackIA
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Lime;
-            this.pictureBox8.Location = new System.Drawing.Point(771, 546);
+            this.pictureBox8.Location = new System.Drawing.Point(781, 556);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(48, 45);
             this.pictureBox8.TabIndex = 37;
@@ -304,14 +305,28 @@ namespace BlackjackIA
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btn_details
             // 
-            this.button1.Location = new System.Drawing.Point(1208, 423);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Plus";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_details.Location = new System.Drawing.Point(1203, 423);
+            this.btn_details.Name = "btn_details";
+            this.btn_details.Size = new System.Drawing.Size(122, 31);
+            this.btn_details.TabIndex = 41;
+            this.btn_details.Text = "Détails";
+            this.btn_details.UseVisualStyleBackColor = true;
+            this.btn_details.Click += new System.EventHandler(this.btn_details_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(716, 446);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(380, 39);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Que voulez vous faire ?";
             // 
             // VuePrincipale
             // 
@@ -320,7 +335,8 @@ namespace BlackjackIA
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1577, 1041);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_details);
             this.Controls.Add(this.lbl_CartesRestantes);
             this.Controls.Add(this.lbl_CartesJouees);
             this.Controls.Add(this.pictureBox15);
@@ -383,7 +399,8 @@ namespace BlackjackIA
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label lbl_CartesJouees;
         private System.Windows.Forms.Label lbl_CartesRestantes;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_details;
+        private System.Windows.Forms.Label label1;
     }
 }
 

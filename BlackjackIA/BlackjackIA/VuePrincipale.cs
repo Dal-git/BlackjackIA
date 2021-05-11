@@ -35,7 +35,7 @@ namespace BlackjackIA
     public partial class VuePrincipale : Form
     {
         Joueur joueur;
-        Paquet paquet = new Paquet(3);
+        Paquet paquet = new Paquet(1);
         static Random _random = new Random();
         Blackjack blackjack;
         Statistiques statistiques = new Statistiques();
@@ -78,6 +78,15 @@ namespace BlackjackIA
             lbl_TotalJoueur.Text = joueur.ValeurDeLaMain.ToString();
             lbl_CartesJouees.Text = carteJouees.ToString();
             lbl_CartesRestantes.Text = blackjack.Paquet.PaquetDuJeu.Count.ToString();
+            blackjack.CompterProbaTirageCarte();
+            lbl_Probabilites.Text = "";
+            foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
+            {
+                if (joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu <= 21)
+                {
+                    lbl_Probabilites.Text += (joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu) + " : " + blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
+                }
+            }
             label13.Text = blackjack.EtatPartie;
         }
 
@@ -107,6 +116,15 @@ namespace BlackjackIA
                     btn_Piocher.BackColor = Color.Red;
                 }
             }
+        }
+
+        private void btn_details_Click(object sender, EventArgs e)
+        {
+            statistiques.Show();
+            foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
+            {
+                statistiques.Controls.Find("lbl_Probabilites", false)[0].Text += valeur.ToString() + " : " + blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
+            };
         }
     }
 }

@@ -32,14 +32,13 @@ namespace BlackjackIA
     {
         int _valeurMainJoueur;
         int _valeurMainCroupier;
+        public int ValeurMainJoueur { get => _valeurMainJoueur; set => _valeurMainJoueur = value; }
+        public int ValeurMainCroupier { get => _valeurMainCroupier; set => _valeurMainCroupier = value; }
 
         public Tirage(int valeurMainJoueur, int valeurMainCroupier)
         {
             ValeurMainCroupier = valeurMainCroupier;
             ValeurMainJoueur = valeurMainJoueur;
         }
-
-        public int ValeurMainJoueur { get => _valeurMainJoueur; set => _valeurMainJoueur = value; }
-        public int ValeurMainCroupier { get => _valeurMainCroupier; set => _valeurMainCroupier = value; }
     }
 }
