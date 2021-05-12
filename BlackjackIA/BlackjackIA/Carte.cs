@@ -5,7 +5,7 @@
 *
 * Experts : M.Robin BOUILLE et M.Daniel VANINI
 *
-* Date : 03 mai 2021
+* Date de la dernière modification  : 03 mai 2021
 *
 * Mandant : CFPT-Informatique, Genève, Petit-Lancy
 *
@@ -14,24 +14,22 @@
 * Version : 1.0
 *
 * Description : Jeu de blackjack développé dans le cadre d'un TPI de fin de CFC à l'école d'informatique de Genève.
+* 
 * L'application permet au joueur de jouer contre un ordinateur et d'être conseillé sur la pioche des cartes.
 *
 * Fichier : Carte.cs
 *
-* Description : Cette classe permet de créer les cartes pour le jeu. Elle hérite de la classe PictureBox pour rendre leur création plus simple et cohérente.
+* Description : Cette classe permet de créer les cartes pour le jeu. Elle hérite de la classe PictureBox pour rendre leur affichage plus simple et cohérente.
 */
-using System;
-using System.Collections.Generic;
+
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BlackjackIA
 {
     class Carte : PictureBox
     {
+        #region Variables
         public enum Couleur { Trefle, Carreau, Coeur, Pique }
         public enum Valeur { Deux, Trois, Quatre, Cinq, Six, Sept, Huit, Neuf, Dix, Valet, Dame, Roi, As }
 
@@ -44,9 +42,11 @@ namespace BlackjackIA
         internal Valeur CarteValeur { get => _carteValeur; set => _carteValeur = value; }
         public int ValeurDansJeu { get => _valeurDansJeu; set => _valeurDansJeu = value; }
         public bool Retourne { get => _retourne; set => _retourne = value; }
-
+        #endregion
         /// <summary>
-        /// 
+        /// Créé une carte avec une couleur (Coeur, Pique etc.) , une valeur (As, Deux etc.) ainsi qu'une valeur dans le jeu (1, 2 etc.)
+        /// Comme une carte est considéré comme un PictureBox je lui initialise aussi un Name, une Size et une Image qui
+        /// a le même nom que la carte.ToString()
         /// </summary>
         /// <param name="couleur"></param>
         /// <param name="valeur"></param>
@@ -82,7 +82,9 @@ namespace BlackjackIA
             Size = new Size(209, 303);
             Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);
         }
-
+        /// <summary>
+        /// Nous permet de changer l'état Retourner d'une carte ainsi que son image
+        /// </summary>
         public void Retourner()
         {
             Retourne = !Retourne;
@@ -96,7 +98,7 @@ namespace BlackjackIA
             }
         }
         /// <summary>
-        /// 
+        /// Nous retourne le nom d'une carte sous le format: _AsPique, _DeuxPique etc.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

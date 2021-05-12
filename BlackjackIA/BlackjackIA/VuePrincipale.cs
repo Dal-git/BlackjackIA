@@ -5,7 +5,7 @@
 *
 * Experts : M.Robin BOUILLE et M.Daniel VANINI
 *
-* Date : 04 mai 2021
+* Date de la dernière modification : 12 mai 2021
 *
 * Mandant : CFPT-Informatique, Genève, Petit-Lancy
 *
@@ -14,54 +14,69 @@
 * Version : 1.0
 *
 * Description : Jeu de blackjack développé dans le cadre d'un TPI de fin de CFC à l'école d'informatique de Genève.
-* L'application permet au joueur de jouer contre un ordinateur et d'être conseillé sur la pioche des cartes.
+* L'application permet au joueur de jouer au Blackjack contre un ordinateur et d'être conseillé sur la pioche des cartes.
 *
 * Fichier : VuePrincipale.cs
 *
-* Description : 
+* Description : Est l'affichage principale du jeu
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BlackjackIA
 {
     public partial class VuePrincipale : Form
     {
-        Joueur joueur;
-        Paquet paquet = new Paquet(1);
+        #region Variables
+        Joueur _joueur;
+        Paquet _paquet = new Paquet(1);
         static Random _random = new Random();
-        Blackjack blackjack;
-        Statistiques statistiques = new Statistiques();
+        Blackjack _blackjack;
 
-        public static Random Random { get => _random; set => _random = value; }
+        public static Random Random { get => Random1; set => Random1 = value; }
+        internal Joueur Joueur { get => _joueur; set => _joueur = value; }
+        internal Paquet Paquet { get => _paquet; set => _paquet = value; }
+        public static Random Random1 { get => _random; set => _random = value; }
+        internal Blackjack Blackjack { get => _blackjack; set => _blackjack = value; }
+        #endregion
 
+        /// <summary>
+        /// Nous construit notre form principale et y initialise le joueur, le blackjack et change le label du nom du joueur
+        /// </summary>
         public VuePrincipale()
         {
             InitializeComponent();
-            joueur = new Joueur("Moi", gbx_Joueur);
-            blackjack = new Blackjack(joueur, paquet, this, Random);
-            lbl_NomDuJoueur.Text = joueur.NomDuJoueur;
+            Joueur = new Joueur("Joueur", gbx_Joueur);
+            Blackjack = new Blackjack(Joueur, Paquet, this, Random);
+            lbl_NomDuJoueur.Text = Joueur.NomDuJoueur;
         }
 
+        /// <summary>
+        /// Quand notre form charge les cartes sont distibué, les éléments d'affichage rafraichi, les boutons change de coleur par rapport au conseil recu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VuePrincipale_Load(object sender, EventArgs e)
         {
-            blackjack.Distribution();
+            Blackjack.Distribution();
             MiseAJourAffichage();
             ChangementCouleurBoutton();
-            lbl_TotalCroupier.Text = blackjack.Croupier.Main[0].ValeurDansJeu.ToString();
+            lbl_TotalCroupier.Text = Blackjack.Croupier.Main[0].ValeurDansJeu.ToString();
         }
 
+        /// <summary>
+        /// Quand on appui sur le bouton de pioche on prend une carte du paquet
+        /// Si notre main plus grande ou égal a 21 le bouton rester est appuyé automatiquement
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Piocher_Click(object sender, EventArgs e)
         {
-            joueur.Piocher(paquet, 1, Random);
-            if (joueur.ValeurDeLaMain >= 21)
+            Joueur.Piocher(Paquet, 1);
+            if (Joueur.ValeurDeLaMain >= 21)
             {
                 btn_Rester_Click(this, e);
             }
@@ -72,38 +87,66 @@ namespace BlackjackIA
             MiseAJourAffichage();
         }
 
+        /// <summary>
+        /// Rafraichi tous les éléments d'affichage de notre form
+        /// </summary>
         public void MiseAJourAffichage()
         {
-            int carteJouees = (joueur.Main.Count + blackjack.Croupier.Main.Count);
-            lbl_TotalJoueur.Text = joueur.ValeurDeLaMain.ToString();
+            int carteJouees = (Joueur.Main.Count + Blackjack.Croupier.Main.Count);
+            double proba10 = 0;
+            lbl_TotalJoueur.Text = Joueur.ValeurDeLaMain.ToString();
             lbl_CartesJouees.Text = carteJouees.ToString();
-            lbl_CartesRestantes.Text = blackjack.Paquet.PaquetDuJeu.Count.ToString();
-            blackjack.CompterProbaTirageCarte();
+            lbl_CartesRestantes.Text = Blackjack.Paquet.PaquetDuJeu.Count.ToString();
+            Blackjack.CompterProbaTirageCarte();
             lbl_Probabilites.Text = "";
+            //Nous fais l'affichage des stats
             foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
             {
-                if (joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu <= 21)
+                if (Joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu <= 21)
                 {
-                    lbl_Probabilites.Text += (joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu) + " : " + blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
+                    if (valeur == Carte.Valeur.Dix || valeur == Carte.Valeur.Valet || valeur == Carte.Valeur.Dame || valeur == Carte.Valeur.Roi)
+                    {
+                        proba10 += Blackjack.ProbaTirageCarte[valeur];
+                        if (valeur == Carte.Valeur.Roi)
+                        {
+                            lbl_Probabilites.Text += (Joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu) + " : " + proba10.ToString() + "%\r";
+                        }
+                    }
+                    else
+                    {
+                        lbl_Probabilites.Text += (Joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu) + " : " + Blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
+                    }
+                }
+                else if (valeur == Carte.Valeur.As && Joueur.ValeurDeLaMain == 20)
+                {
+                    lbl_Probabilites.Text += (Joueur.ValeurDeLaMain + 1) + " : " + Blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
                 }
             }
-            label13.Text = blackjack.EtatPartie;
+            label13.Text = Blackjack.EtatPartie;
         }
 
+        /// <summary>
+        /// Quand on appui sur le bouton pour rester le croupier joue puis lorsqu'il a pioché toutes ses cartes le jeu lance la comparaison de mains et décide du vainqueur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Rester_Click(object sender, EventArgs e)
         {
-            blackjack.CroupierPiocheJusqua17();
-            blackjack.Croupier.AfficherMain(gbx_Croupier);
-            lbl_TotalCroupier.Text = blackjack.Croupier.ValeurDeLaMain.ToString();
-            blackjack.Comparaison();
+            Blackjack.CroupierPiocheJusqua17();
+            Blackjack.Croupier.AfficherMain(gbx_Croupier);
+            lbl_TotalCroupier.Text = Blackjack.Croupier.ValeurDeLaMain.ToString();
+            Blackjack.Comparaison();
             MiseAJourAffichage();
         }
 
+        /// <summary>
+        /// Par rapport au conseil recu les boutons change de couleur pour nous indiquer ce qu'il faut faire
+        /// </summary>
         public void ChangementCouleurBoutton()
         {
-            if (joueur.ValeurDeLaMain != 0 && blackjack.Croupier.ValeurDeLaMain != 0)
+            if (Joueur.ValeurDeLaMain != 0 && Blackjack.Croupier.ValeurDeLaMain != 0)
             {
-                bool ilFautPioche = blackjack.Strategie[blackjack.Strategie.Keys.Where(x => x.ValeurMainCroupier == blackjack.Croupier.Main[0].ValeurDansJeu && x.ValeurMainJoueur == blackjack.Joueur.ValeurDeLaMain).ToArray()[0]];
+                bool ilFautPioche = Blackjack.Strategie[Blackjack.Strategie.Keys.Where(x => x.ValeurMainCroupier == Blackjack.Croupier.Main[0].ValeurDansJeu && x.ValeurMainJoueur == Blackjack.Joueur.ValeurDeLaMain).ToArray()[0]];
 
                 if (ilFautPioche)
                 {
@@ -118,13 +161,31 @@ namespace BlackjackIA
             }
         }
 
+        /// <summary>
+        /// Nous permet d'accéder a la form secondaire qui contient des statistiques plus détaillées sur le jeu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_details_Click(object sender, EventArgs e)
         {
-            statistiques.Show();
-            foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
+            int formStatisitiques = 0;
+            foreach (Form form in Application.OpenForms)
             {
-                statistiques.Controls.Find("lbl_Probabilites", false)[0].Text += valeur.ToString() + " : " + blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
-            };
+                if (form.Name == "Statistiques")
+                {
+                    formStatisitiques++;
+                }
+            }
+            if (formStatisitiques == 0)
+            {
+                Statistiques _statistiques = new Statistiques();
+                _statistiques.Show();
+                foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
+                {
+                    _statistiques.Controls.Find("lbl_Probabilites", false)[0].Text += valeur.ToString() + " : " + Blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
+
+                }
+            }
         }
     }
 }

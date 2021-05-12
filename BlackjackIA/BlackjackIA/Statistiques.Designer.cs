@@ -40,7 +40,7 @@
             this.pnl_statistiques.Location = new System.Drawing.Point(19, 51);
             this.pnl_statistiques.Name = "pnl_statistiques";
             this.pnl_statistiques.Size = new System.Drawing.Size(200, 234);
-            this.pnl_statistiques.TabIndex = 33;
+            this.pnl_statistiques.TabIndex = 33;            
             // 
             // lbl_Probabilites
             // 
@@ -69,10 +69,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(376, 610);
+            this.ClientSize = new System.Drawing.Size(376, 488);
             this.Controls.Add(this.lbl_Probabilites);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pnl_statistiques);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Statistiques";
             this.Text = "Statistiques";
             this.ResumeLayout(false);

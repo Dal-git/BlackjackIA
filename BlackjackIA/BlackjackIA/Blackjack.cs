@@ -5,7 +5,7 @@
 *
 * Experts : M.Robin BOUILLE et M.Daniel VANINI
 *
-* Date : 04 mai 2021
+* Date de la dernière modification : 12 mai 2021
 *
 * Mandant : CFPT-Informatique, Genève, Petit-Lancy
 *
@@ -14,28 +14,27 @@
 * Version : 1.0
 *
 * Description : Jeu de blackjack développé dans le cadre d'un TPI de fin de CFC à l'école d'informatique de Genève.
-* L'application permet au joueur de jouer contre un ordinateur et d'être conseillé sur la pioche des cartes.
+* 
+* L'application permet au joueur de jouer au Blackjack contre un ordinateur et d'être conseillé sur la pioche des cartes.
 *
 * Fichier : Blackjack.cs
 *
-* Description : 
+* Description : Est la classe qui implémente le déroulement et les règles du jeu
 */
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BlackjackIA
 {
     class Blackjack
     {
+        #region Variables
         private Joueur joueur;
         private Croupier _croupier;
         private Paquet _paquet;
-        private Form form;
-        private Random random;
+        private Form form;       
         private string _etatPartie;
         Dictionary<Tirage, bool> strategie = new Dictionary<Tirage, bool>();
         Dictionary<Carte.Valeur, double> probaCroupierSaute = new Dictionary<Carte.Valeur, double>()
@@ -55,20 +54,29 @@ namespace BlackjackIA
 
         internal Paquet Paquet { get => _paquet; set => _paquet = value; }
         internal Joueur Joueur { get => joueur; set => joueur = value; }
-        public Form Form { get => form; set => form = value; }
-        public Random Random { get => random; set => random = value; }
+        public Form Form { get => form; set => form = value; }        
         internal Croupier Croupier { get => _croupier; set => _croupier = value; }
         public string EtatPartie { get => _etatPartie; set => _etatPartie = value; }
         internal Dictionary<Tirage, bool> Strategie { get => strategie; set => strategie = value; }
         internal Dictionary<Carte.Valeur, double> ProbaCroupierSaute { get => probaCroupierSaute; set => probaCroupierSaute = value; }
         public Dictionary<Carte.Valeur, double> ProbaTirageCarte { get => probaTirageCarte; set => probaTirageCarte = value; }
+        #endregion
 
+        /// <summary>
+        /// Construit notre jeu avec le joueur, le paquet, la form où tous serra affiché, et une variables aléatoire pour mélanger le paquet
+        /// Le constructeur nous construit aussi le tableau pour savoir si l'on doit pioché
+        /// </summary>
+        /// <param name="joueur">Récupère les informations du joueur</param>
+        /// <param name="paquetUtilise">Récupère le paquet que l'on utilisera</param>
+        /// <param name="form">Récupère l'affichage où tous serra montrer</param>
+        /// <param name="random">Nous sert a mélanger le paquet</param>
         public Blackjack(Joueur joueur, Paquet paquetUtilise, Form form, Random random)
         {
             Joueur = joueur;
             Paquet = paquetUtilise;
-            Form = form;
-            Random = random;
+            Form = form;            
+
+            Paquet.Melanger(random);
 
             //Créer un croupier avec un groupBox qui lui est associé
             Croupier = new Croupier(form.Controls.Find("gbx_Croupier", false)[0] as GroupBox);
@@ -92,14 +100,20 @@ namespace BlackjackIA
             }
         }
 
+        /// <summary>
+        /// Gère le début d'une partie en distribuant a les mains
+        /// </summary>
         public void Distribution()
-        {
-            Joueur.Piocher(Paquet, 2, Random);
-            Croupier.Piocher(Paquet, 2, Random);
+        {            
+            Joueur.Piocher(Paquet, 2);
+            Croupier.Piocher(Paquet, 2);
             Joueur.AfficherMain(form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);
             Croupier.CacherSecondeCarte();
         }
 
+        /// <summary>
+        /// Regard qui est le vainqueur de la partie
+        /// </summary>
         public void Comparaison()
         {
             if (EtatPartie == null)
@@ -133,14 +147,20 @@ namespace BlackjackIA
             }
         }
 
+        /// <summary>
+        /// Fait en sorte que le croupier pioche jusqu'a que sa main atteigne au moin 17
+        /// </summary>
         public void CroupierPiocheJusqua17()
         {
             while (Croupier.ValeurDeLaMain < 17)
             {
-                Croupier.Piocher(Paquet, 1, random);
+                Croupier.Piocher(Paquet, 1);
             }
         }
 
+        /// <summary>
+        /// Compte le pourcentage de chance l'on a de pioché une certaine carte
+        /// </summary>
         public void CompterProbaTirageCarte()
         {
             probaTirageCarte.Clear();

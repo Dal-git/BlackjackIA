@@ -1,22 +1,8 @@
-# Introduction
-
-Ce document présente les différents aspect de la conception de mon projet BlackjackIA.
+# <span style='color:blue'>Introduction</span>
 
 Ce projet a été réalisé dans le cadre de mon TPI (Travail pratique individuel) de fin de scolarité au CFPT-Informatique en 2021. Il a pour but de confirmer les compétences que j'y aie acquis lors de ces trois années.
 
-BlackjackIA est une application Windows qui permet de simuler une partie de Blackjack contre un croupier avec l'assistance d'un conseiller pour nous aider dans nos partie.
-
-# Rappel de l'énoncé
-
-*Cette section rappel ce qui a été demandé dans le cahier des charges.*
-
-![asdasrafafasCapture](C:\Users\dallas.ctllz\Desktop\asdasrafafasCapture.PNG)
-
-![adfg fhasdagasdCapture](C:\Users\dallas.ctllz\Desktop\adfg fhasdagasdCapture.PNG)
-
-![adifohsiuoghopafapCapture](C:\Users\dallas.ctllz\Desktop\adifohsiuoghopafapCapture.png)
-
-![afdugigdsuisduigosdguiodasCapture](C:\Users\dallas.ctllz\Desktop\afdugigdsuisduigosdguiodasCapture.png)
+Ce document est le manuel technique de l'application. Il y contient une analyse fonctionnelle et organique ainsi qu'un plan, un rapport de tests et le planning effectif.
 
 # <span style='color:blue'>Méthodologie</span>
 
@@ -31,3 +17,11 @@ pas utilisée dans le cadre de ce projet :
 - Mise en œuvre, développement
 - Vérification
 - (Maintenance)
+
+# <span style='color:blue'>Résumé du cahier des charges</span>
+
+## But de l'application
+
+Permettre a un utilisateur de jouer au Blackjack avec les règles de base. (21 et As)
+
+Pour aider le joueur a savoir si il doit piocher ou pas un conseillé sera la pour l'aiguillé. Le conseillé lui affichera aussi les statistiques d'avoir un tirer gagnant.

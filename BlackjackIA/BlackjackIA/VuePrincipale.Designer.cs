@@ -66,11 +66,12 @@ namespace BlackjackIA
             this.lbl_NomDuJoueur.BackColor = System.Drawing.Color.Transparent;
             this.lbl_NomDuJoueur.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NomDuJoueur.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_NomDuJoueur.Location = new System.Drawing.Point(787, 993);
+            this.lbl_NomDuJoueur.Location = new System.Drawing.Point(774, 993);
             this.lbl_NomDuJoueur.Name = "lbl_NomDuJoueur";
             this.lbl_NomDuJoueur.Size = new System.Drawing.Size(241, 39);
             this.lbl_NomDuJoueur.TabIndex = 5;
             this.lbl_NomDuJoueur.Text = "NomDuJoueur";
+            this.lbl_NomDuJoueur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -135,7 +136,7 @@ namespace BlackjackIA
             // gbx_Croupier
             // 
             this.gbx_Croupier.BackColor = System.Drawing.Color.Transparent;
-            this.gbx_Croupier.Location = new System.Drawing.Point(240, 44);
+            this.gbx_Croupier.Location = new System.Drawing.Point(234, 44);
             this.gbx_Croupier.Name = "gbx_Croupier";
             this.gbx_Croupier.Size = new System.Drawing.Size(1297, 334);
             this.gbx_Croupier.TabIndex = 11;
@@ -181,20 +182,20 @@ namespace BlackjackIA
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(1196, 381);
+            this.label10.Location = new System.Drawing.Point(1158, 387);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(209, 39);
+            this.label10.Size = new System.Drawing.Size(373, 39);
             this.label10.TabIndex = 24;
-            this.label10.Text = "Probabilités:";
+            this.label10.Text = "Valeurs probables <21:";
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lbl_Probabilites);
-            this.panel1.Location = new System.Drawing.Point(1331, 423);
+            this.panel1.Location = new System.Drawing.Point(1365, 426);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 234);
+            this.panel1.Size = new System.Drawing.Size(166, 195);
             this.panel1.TabIndex = 32;
             // 
             // lbl_Probabilites
@@ -308,9 +309,9 @@ namespace BlackjackIA
             // btn_details
             // 
             this.btn_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_details.Location = new System.Drawing.Point(1203, 423);
+            this.btn_details.Location = new System.Drawing.Point(1365, 627);
             this.btn_details.Name = "btn_details";
-            this.btn_details.Size = new System.Drawing.Size(122, 31);
+            this.btn_details.Size = new System.Drawing.Size(105, 31);
             this.btn_details.TabIndex = 41;
             this.btn_details.Text = "Détails";
             this.btn_details.UseVisualStyleBackColor = true;
@@ -358,7 +359,7 @@ namespace BlackjackIA
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_NomDuJoueur);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
