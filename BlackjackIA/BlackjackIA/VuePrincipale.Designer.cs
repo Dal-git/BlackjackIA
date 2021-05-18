@@ -393,6 +393,8 @@ namespace BlackjackIA
             this.MinimizeBox = false;
             this.Name = "VuePrincipale";
             this.Text = "BlackjackIA";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VuePrincipale_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VuePrincipale_FormClosed);
             this.Load += new System.EventHandler(this.VuePrincipale_Load);
             this.pnl_stats.ResumeLayout(false);
             this.pnl_stats.PerformLayout();

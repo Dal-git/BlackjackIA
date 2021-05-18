@@ -32,7 +32,7 @@ namespace BlackjackIA
     {
         #region Variables
         Joueur _joueur;
-        Paquet _paquet = new Paquet(1);
+        Paquet _paquet;
         static Random _random = new Random();
         Blackjack _blackjack;
 
@@ -46,10 +46,11 @@ namespace BlackjackIA
         /// <summary>
         /// Nous construit notre form principale et y initialise le joueur, le blackjack et change le label du nom du joueur
         /// </summary>
-        public VuePrincipale()
+        public VuePrincipale(string nomJoueur, int nombreDePaquet)
         {
             InitializeComponent();
-            Joueur = new Joueur("Joueur", gbx_Joueur);
+            _paquet = new Paquet(nombreDePaquet);
+            Joueur = new Joueur(nomJoueur, gbx_Joueur);
             Blackjack = new Blackjack(Joueur, Paquet, this, Random);
             lbl_NomDuJoueur.Text = Joueur.NomDuJoueur;
         }
@@ -161,6 +162,15 @@ namespace BlackjackIA
                     btn_Piocher.BackColor = Color.Red;
                 }
             }
+        }
+
+        private void VuePrincipale_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void VuePrincipale_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

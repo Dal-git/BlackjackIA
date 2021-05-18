@@ -167,3 +167,9 @@ Je vais avancer sur la documentation.
 ## Lundi 17.05
 
 ### Matin
+
+J'avais oublié d'ajouter la vueParamètre ce que j'ai fait.
+
+Cependant un problème avec la fermeture de la première form qui fermait l'application est apparu.
+
+Heureusement grâce a [ce lien](https://stackoverflow.com/questions/10769193/how-do-i-prevent-the-app-from-terminating-when-i-close-the-startup-form) j'ai pu réglé mon problème.
