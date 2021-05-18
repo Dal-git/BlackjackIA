@@ -32,14 +32,14 @@ namespace BlackjackIA
     class Joueur
     {
         #region Variables
-        private List<Carte> main = new List<Carte>();
-        private string nomDuJoueur;
-        private int valeurDeLaMain;
+        private List<Carte> _main = new List<Carte>();
+        private string _nomDuJoueur;
+        private int _valeurDeLaMain;
         private GroupBox _gbxMainJoueur;
 
-        internal List<Carte> Main { get => main; set => main = value; }
-        public string NomDuJoueur { get => nomDuJoueur; set => nomDuJoueur = value; }
-        public int ValeurDeLaMain { get => valeurDeLaMain; set => valeurDeLaMain = value; }
+        internal List<Carte> Main { get => _main; set => _main = value; }
+        public string NomDuJoueur { get => _nomDuJoueur; set => _nomDuJoueur = value; }
+        public int ValeurDeLaMain { get => _valeurDeLaMain; set => _valeurDeLaMain = value; }
         public GroupBox GbxMainJoueur { get => _gbxMainJoueur; set => _gbxMainJoueur = value; }
         #endregion
 
@@ -87,7 +87,7 @@ namespace BlackjackIA
                 {
                     carte.Retourner();
                 }
-                carte.Location = new Point(6 + main.IndexOf(carte) * 210, 15);
+                carte.Location = new Point(6 + _main.IndexOf(carte) * 210, 15);
                 gbx.Controls.Add(carte);
             }
         }
@@ -98,7 +98,7 @@ namespace BlackjackIA
         /// </summary>
         public void TestChangementValeurAs()
         {            
-            if (valeurDeLaMain > 21 && Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray().Count() != 0)
+            if (_valeurDeLaMain > 21 && Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray().Count() != 0)
             {
                 Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray()[0].ValeurDansJeu = 1;
                 CalculerValeurDeLaMain();
@@ -110,7 +110,7 @@ namespace BlackjackIA
         /// </summary>
         public void CalculerValeurDeLaMain()
         {
-            valeurDeLaMain = 0;
+            _valeurDeLaMain = 0;
             foreach (Carte carte in Main)
             {
                 ValeurDeLaMain += carte.ValeurDansJeu;

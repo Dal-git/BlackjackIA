@@ -31,35 +31,21 @@ namespace BlackjackIA
     class Blackjack
     {
         #region Variables
-        private Joueur joueur;
+        private Joueur _joueur;
         private Croupier _croupier;
         private Paquet _paquet;
-        private Form form;       
+        private Form _form;       
         private string _etatPartie;
-        Dictionary<Tirage, bool> strategie = new Dictionary<Tirage, bool>();
-        Dictionary<Carte.Valeur, double> probaCroupierSaute = new Dictionary<Carte.Valeur, double>()
-        {
-            {Carte.Valeur.Deux, 35.30},
-            {Carte.Valeur.Trois, 37.56},
-            {Carte.Valeur.Quatre, 40.28},
-            {Carte.Valeur.Cinq, 42.89},
-            {Carte.Valeur.Six, 42.08},
-            {Carte.Valeur.Sept, 25.99},
-            {Carte.Valeur.Huit, 23.86},
-            {Carte.Valeur.Neuf, 23.34},
-            {Carte.Valeur.Dix, 21.43},{Carte.Valeur.Valet, 21.43},{Carte.Valeur.Dame, 21.43},{Carte.Valeur.Roi, 21.43},
-            {Carte.Valeur.As, 11.65}
-        };
-        Dictionary<Carte.Valeur, double> probaTirageCarte = new Dictionary<Carte.Valeur, double>();
+        Dictionary<Tirage, bool> _strategie = new Dictionary<Tirage, bool>();       
+        Dictionary<Carte.Valeur, double> _probaTirageCarte = new Dictionary<Carte.Valeur, double>();
 
         internal Paquet Paquet { get => _paquet; set => _paquet = value; }
-        internal Joueur Joueur { get => joueur; set => joueur = value; }
-        public Form Form { get => form; set => form = value; }        
+        internal Joueur Joueur { get => _joueur; set => _joueur = value; }
+        public Form Form { get => _form; set => _form = value; }        
         internal Croupier Croupier { get => _croupier; set => _croupier = value; }
         public string EtatPartie { get => _etatPartie; set => _etatPartie = value; }
-        internal Dictionary<Tirage, bool> Strategie { get => strategie; set => strategie = value; }
-        internal Dictionary<Carte.Valeur, double> ProbaCroupierSaute { get => probaCroupierSaute; set => probaCroupierSaute = value; }
-        public Dictionary<Carte.Valeur, double> ProbaTirageCarte { get => probaTirageCarte; set => probaTirageCarte = value; }
+        internal Dictionary<Tirage, bool> Strategie { get => _strategie; set => _strategie = value; }        
+        public Dictionary<Carte.Valeur, double> ProbaTirageCarte { get => _probaTirageCarte; set => _probaTirageCarte = value; }
         #endregion
 
         /// <summary>
@@ -107,7 +93,7 @@ namespace BlackjackIA
         {            
             Joueur.Piocher(Paquet, 2);
             Croupier.Piocher(Paquet, 2);
-            Joueur.AfficherMain(form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);
+            Joueur.AfficherMain(_form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);
             Croupier.CacherSecondeCarte();
         }
 
@@ -163,7 +149,7 @@ namespace BlackjackIA
         /// </summary>
         public void CompterProbaTirageCarte()
         {
-            probaTirageCarte.Clear();
+            _probaTirageCarte.Clear();
             foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
             {
                 double nbrCarte = 0;
