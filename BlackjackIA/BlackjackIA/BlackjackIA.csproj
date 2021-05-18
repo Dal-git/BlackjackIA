@@ -102,9 +102,6 @@
     <None Include="Resources\icone.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\dos.png" />
   </ItemGroup>
   <ItemGroup>

@@ -78,7 +78,7 @@ namespace BlackjackIA
                     ValeurDansJeu = 11;
                     break;
             }
-            Name = CarteValeur.ToString() + CarteCouleur.ToString();
+            Name = this.ToString();
             Size = new Size(209, 303);
             Image = new Bitmap(Properties.Resources.ResourceManager.GetObject(ToString()) as Image, Size);
         }

@@ -41,23 +41,26 @@ namespace BlackjackIA
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_stats = new System.Windows.Forms.Panel();
             this.lbl_Probabilites = new System.Windows.Forms.Label();
             this.btn_Piocher = new System.Windows.Forms.Button();
             this.btn_Rester = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_etatPartie = new System.Windows.Forms.Label();
             this.lbl_CartesJouees = new System.Windows.Forms.Label();
             this.lbl_CartesRestantes = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_details = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.lbl_statsDetails = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pnl_statsDetails = new System.Windows.Forms.Panel();
+            this.pnl_stats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_statsDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_NomDuJoueur
@@ -182,21 +185,21 @@ namespace BlackjackIA
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(1158, 387);
+            this.label10.Location = new System.Drawing.Point(1537, 54);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(373, 39);
             this.label10.TabIndex = 24;
             this.label10.Text = "Valeurs probables <21:";
             // 
-            // panel1
+            // pnl_stats
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.lbl_Probabilites);
-            this.panel1.Location = new System.Drawing.Point(1365, 426);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 195);
-            this.panel1.TabIndex = 32;
+            this.pnl_stats.AutoScroll = true;
+            this.pnl_stats.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_stats.Controls.Add(this.lbl_Probabilites);
+            this.pnl_stats.Location = new System.Drawing.Point(1656, 96);
+            this.pnl_stats.Name = "pnl_stats";
+            this.pnl_stats.Size = new System.Drawing.Size(165, 282);
+            this.pnl_stats.TabIndex = 32;
             // 
             // lbl_Probabilites
             // 
@@ -205,8 +208,9 @@ namespace BlackjackIA
             this.lbl_Probabilites.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Probabilites.Location = new System.Drawing.Point(3, 0);
             this.lbl_Probabilites.Name = "lbl_Probabilites";
-            this.lbl_Probabilites.Size = new System.Drawing.Size(0, 31);
+            this.lbl_Probabilites.Size = new System.Drawing.Size(86, 31);
             this.lbl_Probabilites.TabIndex = 33;
+            this.lbl_Probabilites.Text = "Proba";
             // 
             // btn_Piocher
             // 
@@ -242,17 +246,18 @@ namespace BlackjackIA
             this.label12.TabIndex = 35;
             this.label12.Text = "Tips :       conseillé       a éviter";
             // 
-            // label13
+            // lbl_etatPartie
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(808, 420);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(240, 26);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Que voulez vous faire ?";
+            this.lbl_etatPartie.AutoSize = true;
+            this.lbl_etatPartie.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_etatPartie.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_etatPartie.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_etatPartie.Location = new System.Drawing.Point(808, 420);
+            this.lbl_etatPartie.Name = "lbl_etatPartie";
+            this.lbl_etatPartie.Size = new System.Drawing.Size(240, 26);
+            this.lbl_etatPartie.TabIndex = 36;
+            this.lbl_etatPartie.Text = "Que voulez vous faire ?";
+            this.lbl_etatPartie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_CartesJouees
             // 
@@ -306,17 +311,6 @@ namespace BlackjackIA
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_details
-            // 
-            this.btn_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_details.Location = new System.Drawing.Point(1365, 627);
-            this.btn_details.Name = "btn_details";
-            this.btn_details.Size = new System.Drawing.Size(105, 31);
-            this.btn_details.TabIndex = 41;
-            this.btn_details.Text = "Détails";
-            this.btn_details.UseVisualStyleBackColor = true;
-            this.btn_details.Click += new System.EventHandler(this.btn_details_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -329,24 +323,58 @@ namespace BlackjackIA
             this.label1.TabIndex = 42;
             this.label1.Text = "Que voulez vous faire ?";
             // 
+            // lbl_statsDetails
+            // 
+            this.lbl_statsDetails.AutoSize = true;
+            this.lbl_statsDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_statsDetails.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_statsDetails.Location = new System.Drawing.Point(3, 0);
+            this.lbl_statsDetails.Name = "lbl_statsDetails";
+            this.lbl_statsDetails.Size = new System.Drawing.Size(93, 31);
+            this.lbl_statsDetails.TabIndex = 43;
+            this.lbl_statsDetails.Text = "details";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(1542, 633);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(364, 39);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Statistiques détaillées:";
+            // 
+            // pnl_statsDetails
+            // 
+            this.pnl_statsDetails.AutoScroll = true;
+            this.pnl_statsDetails.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_statsDetails.Controls.Add(this.lbl_statsDetails);
+            this.pnl_statsDetails.Location = new System.Drawing.Point(1624, 675);
+            this.pnl_statsDetails.Name = "pnl_statsDetails";
+            this.pnl_statsDetails.Size = new System.Drawing.Size(223, 315);
+            this.pnl_statsDetails.TabIndex = 44;
+            // 
             // VuePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1577, 1041);
+            this.ClientSize = new System.Drawing.Size(1918, 1041);
+            this.Controls.Add(this.pnl_statsDetails);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_details);
             this.Controls.Add(this.lbl_CartesRestantes);
             this.Controls.Add(this.lbl_CartesJouees);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lbl_etatPartie);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btn_Rester);
             this.Controls.Add(this.btn_Piocher);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_stats);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -366,11 +394,13 @@ namespace BlackjackIA
             this.Name = "VuePrincipale";
             this.Text = "BlackjackIA";
             this.Load += new System.EventHandler(this.VuePrincipale_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl_stats.ResumeLayout(false);
+            this.pnl_stats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_statsDetails.ResumeLayout(false);
+            this.pnl_statsDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,18 +420,20 @@ namespace BlackjackIA
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_stats;
         private System.Windows.Forms.Label lbl_Probabilites;
         private System.Windows.Forms.Button btn_Piocher;
         private System.Windows.Forms.Button btn_Rester;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl_etatPartie;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label lbl_CartesJouees;
         private System.Windows.Forms.Label lbl_CartesRestantes;
-        private System.Windows.Forms.Button btn_details;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_statsDetails;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnl_statsDetails;
     }
 }
 

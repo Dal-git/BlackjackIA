@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl_statistiques = new System.Windows.Forms.Panel();
+            this.pnla_statistiques = new System.Windows.Forms.Panel();
             this.lbl_Probabilites = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // pnl_statistiques
+            // pnla_statistiques
             // 
-            this.pnl_statistiques.AutoScroll = true;
-            this.pnl_statistiques.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_statistiques.Location = new System.Drawing.Point(19, 51);
-            this.pnl_statistiques.Name = "pnl_statistiques";
-            this.pnl_statistiques.Size = new System.Drawing.Size(200, 234);
-            this.pnl_statistiques.TabIndex = 33;            
+            this.pnla_statistiques.AutoScroll = true;
+            this.pnla_statistiques.BackColor = System.Drawing.Color.Transparent;
+            this.pnla_statistiques.Location = new System.Drawing.Point(62, 105);
+            this.pnla_statistiques.Name = "pnla_statistiques";
+            this.pnla_statistiques.Size = new System.Drawing.Size(302, 362);
+            this.pnla_statistiques.TabIndex = 33;
             // 
             // lbl_Probabilites
             // 
             this.lbl_Probabilites.AutoSize = true;
             this.lbl_Probabilites.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Probabilites.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Probabilites.Location = new System.Drawing.Point(22, 51);
+            this.lbl_Probabilites.Location = new System.Drawing.Point(65, 105);
             this.lbl_Probabilites.Name = "lbl_Probabilites";
             this.lbl_Probabilites.Size = new System.Drawing.Size(0, 31);
             this.lbl_Probabilites.TabIndex = 33;
@@ -58,7 +58,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Location = new System.Drawing.Point(55, 63);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(364, 39);
             this.label10.TabIndex = 34;
@@ -72,10 +72,11 @@
             this.ClientSize = new System.Drawing.Size(376, 488);
             this.Controls.Add(this.lbl_Probabilites);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.pnl_statistiques);
+            this.Controls.Add(this.pnla_statistiques);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Statistiques";
             this.Text = "Statistiques";
+            this.Load += new System.EventHandler(this.Statistiques_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,7 +84,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnl_statistiques;
+        private System.Windows.Forms.Panel pnla_statistiques;
         private System.Windows.Forms.Label lbl_Probabilites;
         private System.Windows.Forms.Label label10;
     }

@@ -101,11 +101,7 @@ namespace BlackjackIA
             if (valeurDeLaMain > 21 && Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray().Count() != 0)
             {
                 Main.Where(x => x.CarteValeur == Carte.Valeur.As && x.ValeurDansJeu == 11).ToArray()[0].ValeurDansJeu = 1;
-                valeurDeLaMain = 0;
-                foreach (Carte carte in Main)
-                {
-                    valeurDeLaMain += carte.ValeurDansJeu;
-                }
+                CalculerValeurDeLaMain();
             }
         }
 

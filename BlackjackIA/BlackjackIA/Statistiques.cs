@@ -16,5 +16,10 @@ namespace BlackjackIA
         {
             InitializeComponent();
         }
+
+        private void Statistiques_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -99,9 +99,11 @@ namespace BlackjackIA
             lbl_CartesRestantes.Text = Blackjack.Paquet.PaquetDuJeu.Count.ToString();
             Blackjack.CompterProbaTirageCarte();
             lbl_Probabilites.Text = "";
+            lbl_statsDetails.Text = "";
             //Nous fais l'affichage des stats
             foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
             {
+                lbl_statsDetails.Text += valeur.ToString() + " : " + Blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
                 if (Joueur.ValeurDeLaMain + new Carte(valeur).ValeurDansJeu <= 21)
                 {
                     if (valeur == Carte.Valeur.Dix || valeur == Carte.Valeur.Valet || valeur == Carte.Valeur.Dame || valeur == Carte.Valeur.Roi)
@@ -122,7 +124,7 @@ namespace BlackjackIA
                     lbl_Probabilites.Text += (Joueur.ValeurDeLaMain + 1) + " : " + Blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
                 }
             }
-            label13.Text = Blackjack.EtatPartie;
+            lbl_etatPartie.Text = Blackjack.EtatPartie;
         }
 
         /// <summary>
@@ -157,33 +159,6 @@ namespace BlackjackIA
                 {
                     btn_Rester.BackColor = Color.Green;
                     btn_Piocher.BackColor = Color.Red;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Nous permet d'accéder a la form secondaire qui contient des statistiques plus détaillées sur le jeu
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_details_Click(object sender, EventArgs e)
-        {
-            int formStatisitiques = 0;
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Name == "Statistiques")
-                {
-                    formStatisitiques++;
-                }
-            }
-            if (formStatisitiques == 0)
-            {
-                Statistiques _statistiques = new Statistiques();
-                _statistiques.Show();
-                foreach (Carte.Valeur valeur in (Carte.Valeur[])Enum.GetValues(typeof(Carte.Valeur)))
-                {
-                    _statistiques.Controls.Find("lbl_Probabilites", false)[0].Text += valeur.ToString() + " : " + Blackjack.ProbaTirageCarte[valeur].ToString() + "%\r";
-
                 }
             }
         }
