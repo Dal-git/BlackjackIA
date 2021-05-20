@@ -1,4 +1,4 @@
-![icone](C:\Users\dallas.ctllz\Desktop\icone.png)
+![icone](C:\Users\dallas.ctllz\Desktop\icone.png?raw=true)
 
 <div style="page-break-after: always;"></div>
 
