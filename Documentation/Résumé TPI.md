@@ -20,5 +20,5 @@ Pour la documentation je tenais mon journal de bord a jour a chaque changement. 
 
 L'application finale est jouable et l'IA augmente significativement nos chances de gagner. Cependant certaine fonctionnalités ne fonctionnent pas de manière optimale, mais rien ne nous empêche de pouvoir terminer une partie au complet.
 
-J'ai selon moi rempli tous les points du cahier des charges et l'application devrait donc correspondre aux attentes fixés dans l'énoncé. Parmi les livrables je n'ai pas mis de manuel utilisateur, l'application étant intuitive a utilisé je trouvait l'ajout du dis manuel peut pertinent.
+J'ai selon moi rempli tous les points du cahier des charges et l'application devrait donc correspondre aux attentes fixés dans l'énoncé. 
 
