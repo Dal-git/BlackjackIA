@@ -1,4 +1,4 @@
-![icone](C:\Users\dallas.ctllz\Desktop\icone.png)
+![icone](C:\Users\dallas.ctllz\Documents\GitHub\BlackjackIA\Documentation\DocTechnique.assets\icone.png)
 
 <div style="page-break-after: always;"></div>
 
