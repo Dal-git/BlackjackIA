@@ -40,6 +40,7 @@ namespace BlackjackIA
             // tbx_nom
             // 
             this.tbx_nom.Location = new System.Drawing.Point(79, 12);
+            this.tbx_nom.MaxLength = 15;
             this.tbx_nom.Name = "tbx_nom";
             this.tbx_nom.Size = new System.Drawing.Size(140, 20);
             this.tbx_nom.TabIndex = 0;
