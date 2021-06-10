@@ -178,9 +178,11 @@ namespace BlackjackIA
         {
             Blackjack.Distribution();
             MiseAJourAffichage();
+            Blackjack.EtatPartie = null;
             lbl_etatPartie.Text = "";
             ChangementCouleurBoutton();
-            lbl_TotalCroupier.Text = Blackjack.Croupier.Main[0].ValeurDansJeu.ToString();            
+            lbl_TotalCroupier.Text = Blackjack.Croupier.Main[0].ValeurDansJeu.ToString();
+            button1.Hide();
         }
 
         private void gbx_Joueur_Enter(object sender, EventArgs e)

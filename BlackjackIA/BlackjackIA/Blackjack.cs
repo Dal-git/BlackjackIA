@@ -98,8 +98,7 @@ namespace BlackjackIA
             Joueur.GbxMainJoueur.Controls.Clear();
             Croupier.GbxMainJoueur.Controls.Clear();
             Joueur.Piocher(Paquet, 2);
-            Croupier.Piocher(Paquet, 2);
-            Joueur.AfficherMain(_form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);
+            Croupier.Piocher(Paquet, 2);            
             Croupier.CacherSecondeCarte();
         }
 

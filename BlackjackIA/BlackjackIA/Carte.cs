@@ -56,7 +56,7 @@ namespace BlackjackIA
             Size = new Size(209, 303);
             Image = new Bitmap(Properties.Resources._AsCarreau, Size);
         }
-        public Carte(Valeur valeur, Couleur couleur) : this()
+        public Carte(Valeur valeur = Valeur.As, Couleur couleur = Couleur.Coeur) : this()
         {
             CarteCouleur = couleur;
             CarteValeur = valeur;
