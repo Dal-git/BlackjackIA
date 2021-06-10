@@ -50,7 +50,13 @@ namespace BlackjackIA
         /// </summary>
         /// <param name="couleur"></param>
         /// <param name="valeur"></param>
-        public Carte(Valeur valeur = Valeur.As, Couleur couleur = Couleur.Coeur)
+
+        public Carte() : base()
+        {
+            Size = new Size(209, 303);
+            Image = new Bitmap(Properties.Resources._AsCarreau, Size);
+        }
+        public Carte(Valeur valeur, Couleur couleur) : this()
         {
             CarteCouleur = couleur;
             CarteValeur = valeur;

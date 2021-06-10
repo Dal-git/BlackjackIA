@@ -140,6 +140,7 @@ namespace BlackjackIA
             lbl_TotalCroupier.Text = Blackjack.Croupier.ValeurDeLaMain.ToString();
             Blackjack.Comparaison();
             MiseAJourAffichage();
+            button1.Visible = true;
         }
 
         /// <summary>
@@ -171,6 +172,20 @@ namespace BlackjackIA
 
         private void VuePrincipale_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Blackjack.Distribution();
+            MiseAJourAffichage();
+            lbl_etatPartie.Text = "";
+            ChangementCouleurBoutton();
+            lbl_TotalCroupier.Text = Blackjack.Croupier.Main[0].ValeurDansJeu.ToString();            
+        }
+
+        private void gbx_Joueur_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

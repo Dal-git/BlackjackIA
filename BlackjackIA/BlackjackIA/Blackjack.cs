@@ -90,7 +90,13 @@ namespace BlackjackIA
         /// Gère le début d'une partie en distribuant a les mains
         /// </summary>
         public void Distribution()
-        {            
+        {
+            Joueur.ValeurDeLaMain = 0;
+            Croupier.ValeurDeLaMain = 0;
+            Joueur.Main.Clear();
+            Croupier.Main.Clear();
+            Joueur.GbxMainJoueur.Controls.Clear();
+            Croupier.GbxMainJoueur.Controls.Clear();
             Joueur.Piocher(Paquet, 2);
             Croupier.Piocher(Paquet, 2);
             Joueur.AfficherMain(_form.Controls.Find("gbx_Joueur", false)[0] as GroupBox);

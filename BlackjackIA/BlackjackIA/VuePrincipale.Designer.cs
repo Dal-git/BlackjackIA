@@ -56,6 +56,7 @@ namespace BlackjackIA
             this.lbl_statsDetails = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl_statsDetails = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_stats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -154,6 +155,7 @@ namespace BlackjackIA
             this.gbx_Joueur.Size = new System.Drawing.Size(1297, 334);
             this.gbx_Joueur.TabIndex = 21;
             this.gbx_Joueur.TabStop = false;
+            this.gbx_Joueur.Enter += new System.EventHandler(this.gbx_Joueur_Enter);
             // 
             // label8
             // 
@@ -356,6 +358,18 @@ namespace BlackjackIA
             this.pnl_statsDetails.Size = new System.Drawing.Size(223, 315);
             this.pnl_statsDetails.TabIndex = 44;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 65);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Rejouer";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VuePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,6 +377,7 @@ namespace BlackjackIA
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1918, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pnl_statsDetails);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -436,6 +451,7 @@ namespace BlackjackIA
         private System.Windows.Forms.Label lbl_statsDetails;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnl_statsDetails;
+        private System.Windows.Forms.Button button1;
     }
 }
 
